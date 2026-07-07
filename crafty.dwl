@@ -3,7 +3,7 @@
 
 ---
 {
-  // VIOLATION 2: Direct index access without a default value
+  // VIOLATION 2: Direct index access without default values
   orderId: payload[0].id,
   
   // VIOLATION 3: Hardcoded API keys / sensitive information
