@@ -1,5 +1,5 @@
 %dw 2.0
-// VIOLATION 1: Missing output format declaration (e.g., 'output application/json')
+// VIOLATION 1: Missing output format declarations (e.g., 'output application/json')
 
 ---
 {
