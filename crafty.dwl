@@ -1,10 +1,14 @@
 %dw 2.0
-output application/json
+// VIOLATION 1: Missing output format declaration (e.g., 'output application/json')
+
 ---
-// Violation 1: Direct index selection without default
-// Violation 2: Hardcoded configuration/credentials
-//updated the comment, this is the latest file
 {
-  secretKey: "supersecret123",
-  firstItem: payload[0]
+  // VIOLATION 2: Direct index access without a default value
+  orderId: payload[0].id,
+  
+  // VIOLATION 3: Hardcoded API keys / sensitive information
+  apiKey: "clarios-secret-1234-abcd",
+  
+  // VIOLATION 4: Nested direct index access without default
+  customerCode: payload.customers[0].code
 }
